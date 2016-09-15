@@ -20,7 +20,7 @@ mocha.js: $(SRC) $(SUPPORT) lib/browser/diff.js lib/browser/escape-string-regexp
 	  support/tail.js \
 	  support/foot.js \
 	  > mocha.js
-
+	echo "module.exports = (function() { return this; })();" >> mocha.js
 clean:
 	rm -f mocha.js
 	rm -rf test-outputs
